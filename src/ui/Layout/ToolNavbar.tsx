@@ -184,14 +184,14 @@ export function ToolNavbar() {
   return (<div style={{ position: 'absolute' }}>
     <Navbar height="100vh" width={{ base: 70 }} p="md">
 
-      <Navbar.Section grow>
+      <Navbar.Section >
         <Group direction="column" align="center" spacing={0}>
           <AddMenu setter={setterAction} />
           {toolModes}
         </Group>
 
       </Navbar.Section>
-      <Navbar.Section grow>
+      {/* <Navbar.Section grow>
         <Group direction="column" align="center" spacing={0}>
           <Tooltip label={"Current floor"} position="right" withArrow transitionDuration={0}>
             <div className={classes.link}>
@@ -212,8 +212,8 @@ export function ToolNavbar() {
             action.execute();
           }} />
         </Group>
-      </Navbar.Section>
-      <Navbar.Section grow >
+      </Navbar.Section> */}
+      <Navbar.Section  >
         <Group direction="column" align="center" spacing={0}>
           <NavbarLink icon={Ruler2} label="Measure tool" onClick={() => {
             setTool(Tool.Measure);

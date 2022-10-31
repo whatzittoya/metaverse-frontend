@@ -12,6 +12,7 @@ export class Furniture extends Sprite {
   private id: number; // fiecare mobila isi stie index-ul in plan. uuids?
   // private dragging: boolean;
   public isAttached: boolean;
+  public object_id: number;
   public attachedToLeft: number;
   public attachedToRight: number;
   public xLocked: boolean;
@@ -30,6 +31,7 @@ export class Furniture extends Sprite {
     super(texture);
     this.resourcePath = data.imagePath;
     this.id = id;
+    this.object_id = parseInt(data._id);
     this.orientation = 0;
     this.cursor = "pointer";
     if (attachedTo) {
@@ -165,6 +167,7 @@ export class Furniture extends Sprite {
     res = {
       x: this.x,
       y: this.y,
+      object_id: this.object_id,
       height: this.height / METER,
       width: this.width / METER,
       zIndex: this.zIndex,

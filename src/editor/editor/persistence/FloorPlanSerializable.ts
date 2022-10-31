@@ -1,11 +1,13 @@
-import { FloorSerializable } from "./FloorSerializable"
+import { FloorSerializable } from "./FloorSerializable";
 
 export class FloorPlanSerializable {
-    floors: FloorSerializable[];
-    public furnitureId: number;
-    public wallNodeId: number;
-    
-    constructor() {
-        this.floors = [];
-    }
+  name: String;
+  status: String;
+  floors: FloorSerializable[];
+  public furnitureId: number;
+  public wallNodeId: number;
+
+  constructor() {
+    this.floors = [];
+  }
 }
